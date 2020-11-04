@@ -1,4 +1,7 @@
 package com.tew.model;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class Publicacion {
@@ -46,7 +49,15 @@ public class Publicacion {
 		fecha = fecha_format.getTime();
 	}
 
+	public LocalDateTime getFecha_copia() {
+		
+		return LocalDateTime.now();
+		
+	}
 	
+	public void setFecha_copia(Date fecha_format) {
+		fecha = fecha_format.getTime();
+	}
 	
 	
 

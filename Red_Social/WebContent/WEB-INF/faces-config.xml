@@ -66,7 +66,7 @@
 	<navigation-rule>
 		<from-view-id>/usuarios/copiarPublicacion.xhtml</from-view-id>
 			<navigation-case>
-				<from-action>#{publicaciones.salva}</from-action>
+				<from-action>#{publicaciones.salvaCopia}</from-action>
 				<from-outcome>exito</from-outcome>
 				<to-view-id>/usuarios/publicacionesPropias.xhtml</to-view-id>
 			</navigation-case>

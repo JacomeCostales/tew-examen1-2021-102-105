@@ -152,6 +152,38 @@ public class BeanPublicaciones implements Serializable{
 		 	  }
 	       
 	       
+	       public String salvaCopia() {
+	    	   PublicacionesService service;
+				  try {
+				  
+					  service = Factories.services.createPublicacionesService();
+					  
+			        int id = rand.nextInt();
+			        id = (id^2)%1000000;
+			        if(id<0)id+=1000000;
+			        
+				        
+					if (publicacion.getId() == -1) {
+						publicacion.setId(id);
+						publicacion.setEmail(login.getName());
+						
+						
+						service.savePublicacion(publicacion);
+					}
+					else {
+						service.updatePublicacion(publicacion); 
+					} 
+					//Actualizamos el javabean de alumnos inyectado en la tabla
+					publicaciones = (Publicacion [])service.getPublicacionesPropias(login.getName(),"ID").toArray(new Publicacion[0]);
+					return "exito";
+					
+				  } catch (Exception e) {
+					  e.printStackTrace();
+					return "error";
+				  }
+				  
+		 	  }
+	       
 	      public String copiaModificada(Publicacion p) {
 	    	  PublicacionesService service;
 			  try {

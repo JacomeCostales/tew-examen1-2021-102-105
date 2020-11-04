@@ -25,7 +25,10 @@
        			<f:validateLength maximum="300" />
    			</p:inputTextarea>
 			<p:message for="texto" />
-			<div align="right"><p:commandButton value="#{msgs.botonCopia}" action="#{publicaciones.salva}"></p:commandButton></div>
+			
+			<p:calendar id="fechaInput" value="#{publicacion.fecha_copia}" inline="true" />
+			
+			<div align="right"><p:commandButton value="#{msgs.botonCopia}" action="#{publicaciones.salvaCopia}"></p:commandButton></div>
 		</p:panel>
 		
  	 	
