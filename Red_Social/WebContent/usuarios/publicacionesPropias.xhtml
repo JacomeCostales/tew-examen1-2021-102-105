@@ -21,7 +21,7 @@
 					<p:panel id="panel" header="#{vpubli.titulo}" footer="#{vpubli.fecha_format}" style="margin-left:35%;margin-bottom:10px;">
 						<h:panelGrid columns="1" cellpadding="10" style="margin-bottom:10px;">
 							<h:outputText value="#{vpubli.texto}" />
-							<p:commandButton value="MODIFICAR/COPIAR" action="#{publicaciones.copiaModificada(vpubli)}" update="@all"></p:commandButton>
+							<p:commandButton value="#{msgs.botonModificar}" action="#{publicaciones.copiaModificada(vpubli)}" update="@all"></p:commandButton>
 						</h:panelGrid>
 					</p:panel>
 				</ui:repeat>
