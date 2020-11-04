@@ -109,6 +109,12 @@
 		</navigation-case>
 		
 		<navigation-case>
+			<from-action>#{publicaciones.copiaModificada(vpubli)}</from-action>
+			<from-outcome>exito</from-outcome>
+			<to-view-id>/usuarios/copiarPublicacion.xhtml</to-view-id>
+		</navigation-case>
+		
+		<navigation-case>
 			<from-action>#{publicaciones.listadoAmigos}</from-action>
 			<from-outcome>exito</from-outcome>
 			<to-view-id>/usuarios/publicacionesAmigos.xhtml</to-view-id>

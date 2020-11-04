@@ -150,6 +150,21 @@ public class BeanPublicaciones implements Serializable{
 				  }
 				  
 		 	  }
+	       
+	       
+	      public String copiaModificada(Publicacion p) {
+	    	  PublicacionesService service;
+			  try {
+				  publicacion.setTitulo(p.getTitulo());
+				  publicacion.setTexto(p.getTexto());
+				  
+				 
+				  return "exito";
+			  }catch (Exception e) {
+				  e.printStackTrace();
+				return "error";
+			  }
+	      }
 	     
 	     @PostConstruct
 	     public void init() {    	  
