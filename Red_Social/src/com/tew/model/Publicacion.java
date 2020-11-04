@@ -49,15 +49,7 @@ public class Publicacion {
 		fecha = fecha_format.getTime();
 	}
 
-	public LocalDateTime getFecha_copia() {
-		
-		return LocalDateTime.now();
-		
-	}
 	
-	public void setFecha_copia(Date fecha_format) {
-		fecha = fecha_format.getTime();
-	}
 	
 	
 

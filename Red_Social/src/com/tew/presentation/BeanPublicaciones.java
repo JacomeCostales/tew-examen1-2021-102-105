@@ -189,6 +189,7 @@ public class BeanPublicaciones implements Serializable{
 			  try {
 				  publicacion.setTitulo(p.getTitulo());
 				  publicacion.setTexto(p.getTexto());
+				  publicacion.setFecha(p.getFecha());
 				  
 				 
 				  return "exito";
